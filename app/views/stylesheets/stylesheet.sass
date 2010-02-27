@@ -1,0 +1,62 @@
+!blueprint_grid_columns = 24
+!blueprint_grid_width = 30px
+!blueprint_grid_margin = 10px
+
+!font_color = #333
+
+@import compass/reset.sass
+@import compass/utilities.sass
+@import blueprint/screen.sass
+
++blueprint-typography
++blueprint-utilities
++blueprint-grid
++blueprint-interaction
++blueprint-form
+
+// Mixins
+=round-dat-shit
+  -moz-border-radius: 7px
+  -webkit-border-radius: 7px
+  -o-border-radius: 7px
+
+#header
+  +container
+  background = #FFFFFF
+  +round-dat-shit
+  padding-top: 20px
+  padding-bottom: 10px
+  h1
+    +column(20, true)
+    margin-left: .3em
+
+#container
+  +container
+
+  .flash
+    width: 350px
+    margin-right: auto
+    margin-left: auto      
+    font-size: 150%
+    color: red
+
+  fieldset
+    margin-top: 5em
+    margin-right: auto
+    margin-left: auto
+    width: 500px
+    
+    legend
+      font-size: 150%
+
+  label
+    float: left
+    padding-top: .7em
+    width: 9em
+
+  #bind
+    position: relative
+    left: 350px
+
+  .suggestion_text
+    color: #ccc

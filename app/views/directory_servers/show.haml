@@ -1,0 +1,6 @@
+%div{:class => 'flash'}= flash[:notice]
+
+%ul
+- @tldit.each do |basedn|
+  %li= basedn[:dn]
+

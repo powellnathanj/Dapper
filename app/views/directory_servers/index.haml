@@ -1,0 +1,31 @@
+%div{:class => 'flash'}= flash[:notice]
+
+%form{:action => :authenticate, :method => :post}
+  %fieldset
+    %legend Connect to a directory
+    
+    %input{:type => :hidden, :name => 'authenticity_token', :value => form_authenticity_token}
+
+    %label{:for => :connection_type} Connection:
+    %select{:id => :connection_type}
+      %option{:value => :local} Local
+      %option{:value => :remote} Remote
+
+    %div{:id => :host}
+      %label{:for => :host} Hostname:
+      %input{:type => :text, :name => :host, :class => :text, :id => :host, :tabindex => 1}
+
+    %div
+      %label{:for => :port} Port:
+      %input{:type => :text, :name => :port, :class => :text, :id => :port, :value => '389', :tabindex => 2}
+
+    %div
+      %label{:for => :bind_dn} Bind DN:
+      %input{:type => :text, :name => :bind_dn, :class => :text, :id => :bind_dn, :value => 'cn=Directory Manager', :tabindex => 3}
+
+    %div
+      %label{:for => :password} Password:
+      %input{:type => :password, :name => :password, :class => :text, :tabindex => 4}
+
+    %div{:id => :bind}
+      %input{:type => :submit, :value => :submit, :id => :bind_submit, :tabindex => 5}

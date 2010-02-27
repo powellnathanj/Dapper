@@ -1,0 +1,89 @@
+/* line 7, ie.sass */
+body.bp {
+  text-align: center;
+}
+/* line 38, ../../vendor/plugins/compass/frameworks/blueprint/stylesheets/blueprint/_ie.sass */
+* html body.bp legend {
+  margin: 0px -8px 16px 0;
+  padding: 0;
+}
+/* line 42, ../../vendor/plugins/compass/frameworks/blueprint/stylesheets/blueprint/_ie.sass */
+html>body.bp p code {
+  *white-space: normal;
+}
+/* line 57, ../../vendor/plugins/compass/frameworks/blueprint/stylesheets/blueprint/_ie.sass */
+body.bp .container {
+  text-align: left;
+}
+/* line 59, ../../vendor/plugins/compass/frameworks/blueprint/stylesheets/blueprint/_ie.sass */
+body.bp sup {
+  vertical-align: text-top;
+}
+/* line 61, ../../vendor/plugins/compass/frameworks/blueprint/stylesheets/blueprint/_ie.sass */
+body.bp sub {
+  vertical-align: text-bottom;
+}
+/* line 63, ../../vendor/plugins/compass/frameworks/blueprint/stylesheets/blueprint/_ie.sass */
+body.bp hr {
+  margin: -8px auto 11px;
+}
+/* line 65, ../../vendor/plugins/compass/frameworks/blueprint/stylesheets/blueprint/_ie.sass */
+body.bp img {
+  -ms-interpolation-mode: bicubic;
+}
+/* line 67, ../../vendor/plugins/compass/frameworks/blueprint/stylesheets/blueprint/_ie.sass */
+body.bp fieldset {
+  padding-top: 0;
+}
+/* line 69, ../../vendor/plugins/compass/frameworks/blueprint/stylesheets/blueprint/_ie.sass */
+body.bp textarea {
+  overflow: auto;
+}
+/* line 72, ../../vendor/plugins/compass/frameworks/blueprint/stylesheets/blueprint/_ie.sass */
+body.bp input.text {
+  margin: 0.5em 0;
+  background-color: #fff;
+  border: 1px solid #bbb;
+}
+/* line 76, ../../vendor/plugins/compass/frameworks/blueprint/stylesheets/blueprint/_ie.sass */
+body.bp input.text:focus {
+  border: 1px solid #666;
+}
+/* line 78, ../../vendor/plugins/compass/frameworks/blueprint/stylesheets/blueprint/_ie.sass */
+body.bp input.title {
+  margin: 0.5em 0;
+  background-color: #fff;
+  border: 1px solid #bbb;
+}
+/* line 82, ../../vendor/plugins/compass/frameworks/blueprint/stylesheets/blueprint/_ie.sass */
+body.bp input.title:focus {
+  border: 1px solid #666;
+}
+/* line 84, ../../vendor/plugins/compass/frameworks/blueprint/stylesheets/blueprint/_ie.sass */
+body.bp input.checkbox {
+  position: relative;
+  top: 0.25em;
+}
+/* line 87, ../../vendor/plugins/compass/frameworks/blueprint/stylesheets/blueprint/_ie.sass */
+body.bp input.radio {
+  position: relative;
+  top: 0.25em;
+}
+/* line 90, ../../vendor/plugins/compass/frameworks/blueprint/stylesheets/blueprint/_ie.sass */
+body.bp input.button {
+  position: relative;
+  top: 0.25em;
+}
+/* line 93, ../../vendor/plugins/compass/frameworks/blueprint/stylesheets/blueprint/_ie.sass */
+body.bp textarea {
+  margin: 0.5em 0;
+}
+/* line 95, ../../vendor/plugins/compass/frameworks/blueprint/stylesheets/blueprint/_ie.sass */
+body.bp select {
+  margin: 0.5em 0;
+}
+/* line 97, ../../vendor/plugins/compass/frameworks/blueprint/stylesheets/blueprint/_ie.sass */
+body.bp button {
+  position: relative;
+  top: 0.25em;
+}
