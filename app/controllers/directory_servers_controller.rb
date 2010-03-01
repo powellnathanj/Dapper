@@ -38,7 +38,7 @@ class DirectoryServersController < ApplicationController
     begin
       d = DirectoryServer.new(session[:bind_attrs])
       if d.authenticate
-        @sub_entries = d.get_sub_entries params[:base_dn]
+        @sub_entries = d.get_sub_entries(params[:dn])
       end
     rescue
       flash[:notice] = "Something is particularly wrong"

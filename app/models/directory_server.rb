@@ -33,7 +33,7 @@ class DirectoryServer
   end
 
   def get_sub_entries(base_dn)
-    if ldap = self.auth
+    if ldap = self.authenticate
       ldap.search(:base => base_dn, :filter => self.default_filter, :attributes => '*', :return_result => true, :scope => self.single_scope)
     end
   end

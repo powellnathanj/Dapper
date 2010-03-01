@@ -52,7 +52,8 @@ Dapper::Application.routes.draw do |map|
 
   match 'authenticate' => 'directory_servers#authenticate'
   match 'show' => 'directory_servers#show'
-  match 'get_entries' => 'directory_server#get_entries'
+  match 'get_sub_entries' => 'directory_servers#get_sub_entries'
+
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
