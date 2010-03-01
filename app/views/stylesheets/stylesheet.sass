@@ -1,4 +1,4 @@
-!blueprint_grid_columns = 24
+!blueprint_grid_columns = 30
 !blueprint_grid_width = 30px
 !blueprint_grid_margin = 10px
 
@@ -40,14 +40,52 @@
     font-size: 150%
     color: red
 
-  fieldset
+  fieldset#login
     margin-top: 5em
     margin-right: auto
     margin-left: auto
     width: 500px
-    
-    legend
-      font-size: 150%
+
+  fieldset#tree
+    +column(5)
+    min-height: 500px
+
+    ul
+      list-style-type: none
+      padding-left: 0px
+
+  legend
+    font-size: 150%
+
+  .mainmenu
+    +column(19, true)
+    font-weight: bold
+  
+    ul
+      padding: 6px 0 17px 0
+      margin: 0
+      text-align: left
+  
+      li
+        font-size: 110%
+        display: inline
+  
+        a
+          color: #333333
+          padding: 6px 13px 4px 3px
+          margin-left: 20px
+          text-decoration: none
+          border-bottom: 3px solid #CCCCCC
+  
+          &:hover, &.selected
+            border-bottom-color: #000000
+
+  #show
+    +column(19)
+    margin-left: 20px
+    min-height: 490px
+    border-bottom: solid
+    border-width: 1px
 
   label
     float: left

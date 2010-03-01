@@ -34,4 +34,15 @@ class DirectoryServersController < ApplicationController
     end
   end
 
+  def get_sub_entries
+    begin
+      d = DirectoryServer.new(session[:bind_attrs])
+      if d.authenticate
+        @sub_entries = d.get_sub_entries params[:base_dn]
+      end
+    rescue
+      flash[:notice] = "Something is particularly wrong"
+      redirect_to '/show'
+    end
+  end
 end

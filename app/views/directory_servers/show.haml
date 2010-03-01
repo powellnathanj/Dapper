@@ -1,6 +1,22 @@
 %div{:class => 'flash'}= flash[:notice]
 
-%ul
-- @tldit.each do |basedn|
-  %li= basedn[:dn]
+%fieldset#tree
+  %legend Directory Tree
+  %ul 
+    - @tldit.each do |dn|
+      %li
+        %a{:href => '#', :name => 'base_dn', :value => "#{dn[:dn]}", :class => 'get_entries'}= dn[:dn]
 
+%div.mainmenu
+  %ul
+    %li 
+      %a{:href => '#'} File
+    %li 
+      %a{:href => '#'} Edit
+    %li 
+      %a{:href => '#'} View
+    %li 
+      %a{:href => '#'} Help
+
+%div#show
+  Imagine a form here

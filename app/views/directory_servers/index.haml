@@ -1,8 +1,8 @@
 %div{:class => 'flash'}= flash[:notice]
 
 %form{:action => :authenticate, :method => :post}
-  %fieldset
-    %legend Connect to a directory
+  %fieldset#login
+    %legend#login Connect to a directory
     
     %input{:type => :hidden, :name => 'authenticity_token', :value => form_authenticity_token}
 

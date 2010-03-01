@@ -12,4 +12,10 @@ $(function(){
     $('#host').toggle();
   });
   
+  // Tree
+  $('.get_entries').bind('click', function(){
+    console.log('oh hai');
+  });
+
+
 });
