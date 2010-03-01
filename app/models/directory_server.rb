@@ -19,6 +19,7 @@ class DirectoryServer
     begin
       ldap = Net::LDAP.new(:host => self.host, :port => self.port)
       ldap.auth(self.bind_dn, self.password)
+      return ldap
     rescue Exception => e
       logger.warn "#{e.backtrace}"
       return false
@@ -26,13 +27,14 @@ class DirectoryServer
   end
 
   def get_tree
-    begin
-      ldap = Net::LDAP.new(:host => self.host, :port => self.port)
-      ldap.auth(self.bind_dn, self.password)
+    if ldap = self.authenticate
       ldap.search(:base => "", :filter => self.default_filter, :attributes => '*', :return_result => true, :scope => self.single_scope)
-    rescue Exception => e
-      logger.warn "#{e.backtrace}"
-      return false
+    end
+  end
+
+  def get_sub_entries(dn)
+    if ldap = self.auth
+
     end
   end
 
