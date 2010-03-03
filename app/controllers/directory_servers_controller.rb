@@ -39,8 +39,12 @@ class DirectoryServersController < ApplicationController
       d = DirectoryServer.new(session[:bind_attrs])
       if d.authenticate
         @sub_entries = d.get_sub_entries(params[:dn])
+        respond_to do |format|
+          format.json  { render :json => @sub_entries }
+        end
       end
-    rescue
+    rescue Exception => e
+      logger.info "#{e.backtrace}"
       flash[:notice] = "Something is particularly wrong"
       redirect_to '/show'
     end

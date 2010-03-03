@@ -14,7 +14,10 @@ $(function(){
   
   // Tree
   $('.get_entries').bind('click', function(){
-    console.log('oh hai');
+    console.log(this.name);
+    $.get('/get_sub_entries.json',{dn : this.name}, function(data){
+      console.log(data);  
+    });
   });
 
 

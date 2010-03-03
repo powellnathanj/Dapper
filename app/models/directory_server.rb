@@ -28,13 +28,15 @@ class DirectoryServer
 
   def get_tree
     if ldap = self.authenticate
-      ldap.search(:base => "", :filter => self.default_filter, :attributes => '*', :return_result => true, :scope => self.single_scope)
+      ldap.search(:base => "", :filter => self.default_filter, 
+                  :attributes => '*', :return_result => true, :scope => self.single_scope)
     end
   end
 
   def get_sub_entries(base_dn)
     if ldap = self.authenticate
-      ldap.search(:base => base_dn, :filter => self.default_filter, :attributes => '*', :return_result => true, :scope => self.single_scope)
+      ldap.search(:base => base_dn, :filter => self.default_filter, 
+                  :attributes => '*', :return_result => true, :scope => self.single_scope)
     end
   end
 

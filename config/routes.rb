@@ -53,6 +53,7 @@ Dapper::Application.routes.draw do |map|
   match 'authenticate' => 'directory_servers#authenticate'
   match 'show' => 'directory_servers#show'
   match 'get_sub_entries' => 'directory_servers#get_sub_entries'
+  match 'get_sub_entries.:format' => 'directory_servers#get_sub_entries'
 
   # See how all your routes lay out with "rake routes"
 

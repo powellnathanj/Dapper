@@ -5,7 +5,7 @@
   %ul 
     - @tldit.each do |dn|
       %li
-        %a{:href => '#', :name => 'dn', :value => "#{dn[:dn]}", :class => 'get_entries'}= dn[:dn]
+        %a{:href => '#', :name => "#{dn[:dn]}", :class => 'get_entries'}= dn[:dn]
 
 %div.mainmenu
   %ul
